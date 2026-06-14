@@ -20,41 +20,7 @@ The application is deployed across multiple public subnets and uses an Applicati
 
 !\[Architecture Diagram](architecture/architecture-diagram.png)
 
-           Internet
-                        │
-                        ▼
-         Application Load Balancer (web-alb)
-                        │
-                        ▼
-            Target Group (web-target-group)
-                        │
-           ┌────────────┴────────────┐
-           ▼                         ▼
-     web-server-1              web-server-2
-        (Nginx)                   (Nginx)
-
-────────────────────────────────────────────
-VPC: project-vpc (10.0.0.0/16)
-
-  public-subnet-1          public-subnet-2
-     10.0.1.0/24             10.0.2.0/24
-
-Internet Gateway
-Route Table
-Security Groups
-────────────────────────────────────────────
-
-CloudWatch Metrics
-        │
-        ▼
-CPU Alarm
-        │
-        ▼
-SNS Email Alerts
-
-
-
-
+         
 \## AWS Services Used
 
 
